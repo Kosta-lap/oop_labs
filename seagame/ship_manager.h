@@ -14,9 +14,7 @@ class ShipManager {
         explicit ShipManager(int count, std::vector<int> ships_lengths);
         ~ShipManager();
 
-        int getShipCount();
         Ship* getShip(int ship_index);
-        void hitShip(int ship_index, int segment_index);
 };
 
 

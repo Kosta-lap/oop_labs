@@ -9,24 +9,16 @@ enum class SegmentState {Intact, Damaged, Destroyed};
 class Ship {
     private:
         int length;
-        bool isHorizontal;
-
-        Point coords;
         std::vector<SegmentState> segments;
 
     public:
         explicit Ship(int length);
 
         int getShipLength();
-        bool getIsHorizontal();
-        Point getCoordinates();
-
-        void setShipSpec(Point new_coords, bool is_horizontal);
-
         bool isDestroyed();
 
         void hitSegment(int index);
-        SegmentState getSegmentState(int index);
+        SegmentState getSegment(int index);
         void printShipSegments();
 };
 

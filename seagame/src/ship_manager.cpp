@@ -16,19 +16,9 @@ ShipManager::~ShipManager() {
     }
 }
 
-int ShipManager::getShipCount() {
-    return shipsCount;
-}
-
 Ship* ShipManager::getShip(int ship_index) {
     if (ship_index < 0 || ship_index >= ships.size()) {
         throw std::invalid_argument("Invalid ship index");
     }
     return ships[ship_index];
-}
-
-void ShipManager::hitShip(int ship_index, int segment_index){
-    Ship* ship = getShip(ship_index);
-    ship->hitSegment(segment_index);
-    ship->printShipSegments();
 }

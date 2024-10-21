@@ -5,14 +5,14 @@
 #include "point.h"
 #include "ship.h"
 #include "ship_manager.h"
+#include "field_cell.h"
 
-enum class SellState{Unknown, Empty, Ship};
 
 class GameField {
     private:
         int width;
         int height;
-        std::vector<std::vector<SellState>> field;
+        std::vector<std::vector<FieldCell>> field;
 
     public:
         GameField(int width, int height);
@@ -24,9 +24,8 @@ class GameField {
 
         bool checkCorrectPosition(Point coords, bool is_horizontal, int length);
         void placeShip(Ship* ship, Point coords, bool is_horizontal);
-        void attackField(Point coords, ShipManager* manager);
+        void attackField(Point coords);
         void printField();
-        void setShips(ShipManager* manager);
 };
 
 

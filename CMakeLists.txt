@@ -8,4 +8,6 @@ add_executable(OOP main.cpp seagame/ship.h seagame/src/ship.cpp
         seagame/game_field.h
         seagame/ship_manager.h
         seagame/src/ship_manager.cpp
-        seagame/point.h)
+        seagame/point.h
+        seagame/field_cell.h)
+    

@@ -5,7 +5,8 @@ GameField::GameField(int width, int height) {
     this->width = width;
     this->height = height;
 
-    field.assign(height, std::vector<SellState>(width, SellState::Unknown));
+    field.assign(height, std::vector<FieldCell>(width, FieldCell {SellState::Unknown, nullptr}))
+    ;
 }
 
 GameField::GameField(const GameField& other) {
@@ -67,7 +68,7 @@ bool GameField::checkCorrectPosition(Point coords, bool is_horizontal, int lengt
         for (int j = first_top.x; j <= second_top.x; j++) {
             if (i < 0 || j < 0 || i >= height || j >= width) {continue;}
 
-            if (field[i][j] == SellState::Ship){
+            if (field[i][j].cell_state == SellState::Ship){
                 return false;
             }
         }
@@ -81,61 +82,47 @@ void GameField::placeShip(Ship* ship, Point coords, bool is_horizontal){
         throw std::invalid_argument("You cant place ship on this coords!");
     }
 
+
     if (is_horizontal){
         for (int i = 0; i < ship->getShipLength(); i++) {
-            field[coords.y][coords.x + i] = SellState::Ship;
+            FieldCell& current_cell = field[coords.y][coords.x + i];
+
+            current_cell.ship_pointer = ship;
+            current_cell.segment_index = i;
+            current_cell.cell_state = SellState::Ship;
         }
     }else{
         for (int i = 0; i < ship->getShipLength(); i++) {
-            field[coords.y + i][coords.x] = SellState::Ship;
+            FieldCell& current_cell = field[coords.y + i][coords.x];
+
+            current_cell.ship_pointer = ship;
+            current_cell.segment_index = i;
+            current_cell.cell_state = SellState::Ship;
         }
     }
 
-    ship->setShipSpec(coords, is_horizontal);
 }
 
-void GameField::attackField(Point coords, ShipManager* manager){
-    if(field[coords.y][coords.x] == SellState::Ship){
-        for (int ship_index = 0; ship_index < manager->getShipCount(); ship_index++) {
-            Ship* current_ship = manager->getShip(ship_index);
-            Point ship_coords = current_ship->getCoordinates();
-            int length = current_ship->getShipLength();
+void GameField::attackField(Point coords){
+    FieldCell current_cell = field[coords.y][coords.x];
+    if(current_cell.cell_state == SellState::Ship){
+        Ship* current_ship = current_cell.ship_pointer;
+        current_ship->hitSegment(current_cell.segment_index);
 
-            if (current_ship->getIsHorizontal()){
-                if (coords.y == ship_coords.y && coords.x >= ship_coords.x && coords.x < ship_coords.x + length){
-                    int segmentIndex = coords.x - ship_coords.x;
-                    manager->hitShip(ship_index, segmentIndex);
-                }
-            }else{
-                if (coords.x == ship_coords.x && coords.y >= ship_coords.y && coords.y < ship_coords.y + length){
-                    int segmentIndex = coords.y - ship_coords.y;
-                    manager->hitShip(ship_index, segmentIndex);
-                }
-            }
-
-        }
-    }else if(field[coords.y][coords.x] == SellState::Unknown){
-        field[coords.y][coords.x] = SellState::Empty;
-    }
-}
-
-void GameField::setShips(ShipManager* manager){
-    for (int i = 0; i < manager->getShipCount(); ++i) {
-        Point ship_coords{};
-        bool is_horizontal;
-        std::cin >> ship_coords.x >> ship_coords.y >> is_horizontal;
-        placeShip(manager->getShip(i), ship_coords, is_horizontal);
+        //current_cell.ship_pointer->hitSegment(current_cell.segment_index);
+    }else if(field[coords.y][coords.x].cell_state == SellState::Unknown){
+        field[coords.y][coords.x].cell_state = SellState::Empty;
     }
 }
 
 void GameField::printField() {
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
-            if (field[i][j] == SellState::Unknown){
+            if (field[i][j].cell_state == SellState::Unknown){
                 std::cout << "0 ";
-            }else if(field[i][j] == SellState::Empty){
+            }else if(field[i][j].cell_state == SellState::Empty){
                 std::cout << "1 ";
-            }else if(field[i][j] == SellState::Ship){
+            }else if(field[i][j].cell_state == SellState::Ship){
                 std::cout << "2 ";
             }
         }
