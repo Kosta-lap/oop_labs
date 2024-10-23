@@ -26,6 +26,7 @@ class GameField {
 
         int getFieldWidth();
         int getFieldHeight();
+        bool checkCorrectCoords(Point cords);
         FieldCell getCellInfo(Point coords);
         CellState getSellState(Point coords);
 

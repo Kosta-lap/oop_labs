@@ -1,3 +1,5 @@
+#include "../place_error.h"
+#include "../out_of_bounds_error.h"
 #include "../game_field.h"
 #include "iostream"
 
@@ -57,6 +59,12 @@ int GameField::getFieldHeight() {
     return this->height;
 }
 
+bool GameField::checkCorrectCoords(Point coords) {
+    if (coords.x > width - 1 || coords.x < 0 || coords.y < 0 || coords.y > height - 1) return false;
+
+    return true;
+}
+
 FieldCell GameField::getCellInfo(Point coords) {
     return field[coords.y][coords.x];
 }
@@ -66,7 +74,7 @@ CellState GameField::getSellState(Point coords){
 };
 
 bool GameField::checkCorrectPosition(Point coords, bool is_horizontal, int length) {
-    if (coords.x > width - 1 || coords.x < 0 || coords.y < 0 || coords.y > height - 1) return false;
+    if (!checkCorrectCoords(coords)) return false;
 
     Point first_top = {coords.x - 1, coords.y - 1};
     Point second_top = {0, 0};
@@ -94,7 +102,7 @@ bool GameField::checkCorrectPosition(Point coords, bool is_horizontal, int lengt
 
 void GameField::placeShip(Ship* ship, Point coords, bool is_horizontal){
     if (!checkCorrectPosition(coords, is_horizontal, ship->getShipLength())){
-        throw std::invalid_argument("You cant place ship on this coords!");
+        throw PlaceError("You cant place ship on this coords!");
     }
 
 
@@ -119,12 +127,12 @@ void GameField::placeShip(Ship* ship, Point coords, bool is_horizontal){
 }
 
 void GameField::attackField(Point coords){
+    if (!checkCorrectCoords(coords)) throw OutOfBoundsError("Attack out of bounds!");
     FieldCell current_cell = field[coords.y][coords.x];
     if(current_cell.cell_state == CellState::Ship){
         Ship* current_ship = current_cell.ship_pointer;
         current_ship->hitSegment(current_cell.segment_index);
 
-        //current_cell.ship_pointer->hitSegment(current_cell.segment_index);
     }else if(field[coords.y][coords.x].cell_state == CellState::Unknown){
         field[coords.y][coords.x].cell_state = CellState::Empty;
     }

@@ -133,7 +133,10 @@
 				21,
 				23,
 				25,
-				27
+				27,
+				28,
+				29,
+				30
 			]
 		}
 	],
@@ -289,6 +292,21 @@
 		{
 			"backtrace" : 1,
 			"path" : "seagame/ability_production.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "seagame/place_error.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "seagame/out_of_bounds_error.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "seagame/ability_extract_error.h",
 			"sourceGroupIndex" : 1
 		}
 	],

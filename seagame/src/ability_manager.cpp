@@ -1,4 +1,5 @@
 #include "../ability_manager.h"
+#include "../ability_extract_error.h"
 
 AbilityManager::AbilityManager() {
     std::vector<AbilityName> random_abilities = { AbilityName::DoubleDamage, AbilityName::Scanner, AbilityName::RandomShot};
@@ -17,6 +18,8 @@ void AbilityManager::produceAbility(AbilityName abilityName) {
 }
 
 std::shared_ptr<AbilityBuilder> AbilityManager::extractAbility() {
+    if (this->abilities.empty()) throw AbilityExtractError("No abilities available!");
+
     std::shared_ptr<AbilityBuilder> first_ability = this->abilities.front();
     this->abilities.pop();
 

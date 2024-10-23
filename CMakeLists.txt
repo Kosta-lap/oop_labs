@@ -28,5 +28,8 @@ add_executable(OOP main.cpp seagame/ship.h seagame/src/ship.cpp
         seagame/src/random_shot_builder.cpp
         seagame/random_shot_builder.h
         seagame/src/ability_production.cpp
-        seagame/ability_production.h)
+        seagame/ability_production.h
+        seagame/place_error.h
+        seagame/out_of_bounds_error.h
+        seagame/ability_extract_error.h)
     
