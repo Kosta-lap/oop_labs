@@ -1,6 +1,5 @@
 #include "../ship_manager.h"
 #include "stdexcept"
-#include "iostream"
 
 ShipManager::ShipManager(int count, std::vector<int> ships_lengths) {
    this->shipsCount = count;

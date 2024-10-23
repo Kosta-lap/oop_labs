@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="OOP" targetName="OOP" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="16d517f6-f27f-4021-bbcd-10f0b5499261" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-788b342ce4164022e5b7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-10-19T20-41-53-0444.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-OOP-Debug-51b8b00248b5f47b3c17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/game_field.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/game_field.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OOP.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OOP.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/field_cell.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/field_cell.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/game_field.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/game_field.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/src/game_field.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game_field.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/src/ship_manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/ship_manager.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="2.1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2lyl5VksoW55Q1VjOpqXg9Tez1P" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kosta\Desktop\OOP\seagame\src" />
+      <recent name="C:\Users\kosta\Desktop\OOP\seagame" />
+      <recent name="C:\Users\kosta\Desktop\OOP" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="OOP" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OOP" TARGET_NAME="OOP" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OOP" RUN_TARGET_NAME="OOP">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="16d517f6-f27f-4021-bbcd-10f0b5499261" name="Changes" comment="" />
+      <created>1726160014861</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726160014861</updated>
+      <workItem from="1726160017120" duration="1333000" />
+      <workItem from="1726223386233" duration="1546000" />
+      <workItem from="1726230560995" duration="3449000" />
+      <workItem from="1726241484408" duration="10000" />
+      <workItem from="1726328287038" duration="3642000" />
+      <workItem from="1726391230145" duration="1615000" />
+      <workItem from="1726392881695" duration="2415000" />
+      <workItem from="1726410008178" duration="10000" />
+      <workItem from="1726422097628" duration="6925000" />
+      <workItem from="1726513185381" duration="59000" />
+      <workItem from="1726742463661" duration="476000" />
+      <workItem from="1727254713688" duration="6189000" />
+      <workItem from="1727262568251" duration="4497000" />
+      <workItem from="1727708514768" duration="1000" />
+      <workItem from="1727809772705" duration="2477000" />
+      <workItem from="1727854098338" duration="22344000" />
+      <workItem from="1727896122741" duration="230000" />
+      <workItem from="1727949693286" duration="1043000" />
+      <workItem from="1728044225716" duration="2753000" />
+      <workItem from="1728215989766" duration="1000" />
+      <workItem from="1728238606356" duration="8000" />
+      <workItem from="1728849383251" duration="8000" />
+      <workItem from="1729017179572" duration="3081000" />
+      <workItem from="1729069568278" duration="1352000" />
+      <workItem from="1729368374480" duration="1244000" />
+      <workItem from="1729369643730" duration="324000" />
+      <workItem from="1729369977679" duration="421000" />
+      <workItem from="1729370411175" duration="2029000" />
+      <workItem from="1729512699563" duration="18502000" />
+      <workItem from="1729585978648" duration="140000" />
+      <workItem from="1729586126754" duration="246000" />
+      <workItem from="1729587608559" duration="1083000" />
+      <workItem from="1729622281732" duration="4577000" />
+      <workItem from="1729681354340" duration="4415000" />
+      <workItem from="1729685915046" duration="1861000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+</project>

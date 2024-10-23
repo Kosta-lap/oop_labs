@@ -5,8 +5,7 @@ GameField::GameField(int width, int height) {
     this->width = width;
     this->height = height;
 
-    field.assign(height, std::vector<FieldCell>(width, FieldCell {SellState::Unknown, nullptr}))
-    ;
+    field.assign(height, std::vector<FieldCell>(width, FieldCell {CellState::Unknown, nullptr}));
 }
 
 GameField::GameField(const GameField& other) {
@@ -50,6 +49,22 @@ GameField& GameField::operator=(GameField&& other) noexcept {
     return *this;
 }
 
+int GameField::getFieldWidth() {
+    return this->width;
+}
+
+int GameField::getFieldHeight() {
+    return this->height;
+}
+
+FieldCell GameField::getCellInfo(Point coords) {
+    return field[coords.y][coords.x];
+}
+
+CellState GameField::getSellState(Point coords){
+    return field[coords.y][coords.x].cell_state;
+};
+
 bool GameField::checkCorrectPosition(Point coords, bool is_horizontal, int length) {
     if (coords.x > width - 1 || coords.x < 0 || coords.y < 0 || coords.y > height - 1) return false;
 
@@ -68,7 +83,7 @@ bool GameField::checkCorrectPosition(Point coords, bool is_horizontal, int lengt
         for (int j = first_top.x; j <= second_top.x; j++) {
             if (i < 0 || j < 0 || i >= height || j >= width) {continue;}
 
-            if (field[i][j].cell_state == SellState::Ship){
+            if (field[i][j].cell_state == CellState::Ship){
                 return false;
             }
         }
@@ -89,7 +104,7 @@ void GameField::placeShip(Ship* ship, Point coords, bool is_horizontal){
 
             current_cell.ship_pointer = ship;
             current_cell.segment_index = i;
-            current_cell.cell_state = SellState::Ship;
+            current_cell.cell_state = CellState::Ship;
         }
     }else{
         for (int i = 0; i < ship->getShipLength(); i++) {
@@ -97,7 +112,7 @@ void GameField::placeShip(Ship* ship, Point coords, bool is_horizontal){
 
             current_cell.ship_pointer = ship;
             current_cell.segment_index = i;
-            current_cell.cell_state = SellState::Ship;
+            current_cell.cell_state = CellState::Ship;
         }
     }
 
@@ -105,24 +120,28 @@ void GameField::placeShip(Ship* ship, Point coords, bool is_horizontal){
 
 void GameField::attackField(Point coords){
     FieldCell current_cell = field[coords.y][coords.x];
-    if(current_cell.cell_state == SellState::Ship){
+    if(current_cell.cell_state == CellState::Ship){
         Ship* current_ship = current_cell.ship_pointer;
         current_ship->hitSegment(current_cell.segment_index);
 
         //current_cell.ship_pointer->hitSegment(current_cell.segment_index);
-    }else if(field[coords.y][coords.x].cell_state == SellState::Unknown){
-        field[coords.y][coords.x].cell_state = SellState::Empty;
+    }else if(field[coords.y][coords.x].cell_state == CellState::Unknown){
+        field[coords.y][coords.x].cell_state = CellState::Empty;
     }
+}
+
+void GameField::setAbility(std::shared_ptr<AbilityInterface> ability){
+    ability->applyAbility(*this);
 }
 
 void GameField::printField() {
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
-            if (field[i][j].cell_state == SellState::Unknown){
+            if (field[i][j].cell_state == CellState::Unknown){
                 std::cout << "0 ";
-            }else if(field[i][j].cell_state == SellState::Empty){
+            }else if(field[i][j].cell_state == CellState::Empty){
                 std::cout << "1 ";
-            }else if(field[i][j].cell_state == SellState::Ship){
+            }else if(field[i][j].cell_state == CellState::Ship){
                 std::cout << "2 ";
             }
         }
