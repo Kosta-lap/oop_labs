@@ -8,6 +8,7 @@
 #include "ship_manager.h"
 #include "field_cell.h"
 #include "ability_interface.h"
+#include "command.h"
 
 
 class GameField {
@@ -15,6 +16,8 @@ class GameField {
         int width;
         int height;
         std::vector<std::vector<FieldCell>> field;
+
+        std::shared_ptr<Command> addNewAbility;
 
     public:
         GameField(int width, int height);
@@ -27,8 +30,10 @@ class GameField {
         int getFieldWidth();
         int getFieldHeight();
         bool checkCorrectCoords(Point cords);
-        FieldCell getCellInfo(Point coords);
+        FieldCell* getCellInfo(Point coords);
         CellState getSellState(Point coords);
+
+        void setCommand(std::shared_ptr<Command> command);
 
         bool checkCorrectPosition(Point coords, bool is_horizontal, int length);
         void placeShip(Ship* ship, Point coords, bool is_horizontal);

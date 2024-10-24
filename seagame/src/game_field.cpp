@@ -65,13 +65,17 @@ bool GameField::checkCorrectCoords(Point coords) {
     return true;
 }
 
-FieldCell GameField::getCellInfo(Point coords) {
-    return field[coords.y][coords.x];
+FieldCell* GameField::getCellInfo(Point coords) {
+    return &field[coords.y][coords.x];
 }
 
 CellState GameField::getSellState(Point coords){
     return field[coords.y][coords.x].cell_state;
-};
+}
+
+void GameField::setCommand(std::shared_ptr<Command> command){
+    this->addNewAbility = command;
+}
 
 bool GameField::checkCorrectPosition(Point coords, bool is_horizontal, int length) {
     if (!checkCorrectCoords(coords)) return false;
@@ -132,6 +136,10 @@ void GameField::attackField(Point coords){
     if(current_cell.cell_state == CellState::Ship){
         Ship* current_ship = current_cell.ship_pointer;
         current_ship->hitSegment(current_cell.segment_index);
+
+        if (current_ship->isDestroyed()){
+            this->addNewAbility->execute();
+        }
 
     }else if(field[coords.y][coords.x].cell_state == CellState::Unknown){
         field[coords.y][coords.x].cell_state = CellState::Empty;

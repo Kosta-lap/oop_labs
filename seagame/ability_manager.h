@@ -8,7 +8,7 @@
 
 #include "ability_interface.h"
 #include "ability_production.h"
-#include "Point.h"
+#include "point.h"
 
 class AbilityManager {
     private:
@@ -19,7 +19,11 @@ class AbilityManager {
         AbilityManager();
 
         void produceAbility(AbilityName abilityName);
+
+        std::vector<AbilityName> getRandomAbilities();
         std::shared_ptr<AbilityBuilder> extractAbility();
+
+
         AbilityName font_skill();
         int queue_size();
 };

@@ -31,5 +31,9 @@ add_executable(OOP main.cpp seagame/ship.h seagame/src/ship.cpp
         seagame/ability_production.h
         seagame/place_error.h
         seagame/out_of_bounds_error.h
-        seagame/ability_extract_error.h)
+        seagame/ability_extract_error.h
+        seagame/command.h
+        seagame/add_new_ability.h
+        seagame/src/add_new_ability.cpp
+)
     

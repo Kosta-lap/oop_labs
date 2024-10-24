@@ -5,6 +5,7 @@
 #include "seagame/out_of_bounds_error.h"
 #include "seagame/ability_extract_error.h"
 #include "seagame/ability_manager.h"
+#include "seagame/add_new_ability.h"
 
 
 int main() {
@@ -35,6 +36,18 @@ int main() {
     game_field.printField();
     AbilityManager a_manager;
 
+    std::shared_ptr<AddNewAbility> reaction = std::make_shared<AddNewAbility>(a_manager);
+    game_field.setCommand(reaction);
+
+    //ShipObserver obs = ShipObserver(&a_manager);
+    //game_field.setShipObserver(&obs);
+
+
+//    first->addObserver(&obs);
+//    second->addObserver(&obs);
+//    third->addObserver(&obs);
+
+
     for (int i = 0; i < 4; ++i) {
         std::shared_ptr<AbilityBuilder> ab;
         try{
@@ -63,7 +76,13 @@ int main() {
     a_manager.produceAbility(AbilityName::RandomShot);
     game_field.setAbility(a_manager.extractAbility()->create());
 
+    std::cout << a_manager.queue_size() << "\n";
+    game_field.attackField({1, 0});
+    game_field.attackField({1, 0});
+    std::cout << a_manager.queue_size() << "\n";
 
+    AbilityName ab = a_manager.font_skill();
+    std::cout << "Ability "<< ": " << (ab == AbilityName::DoubleDamage ? "DoubleDamage" : ab == AbilityName::Scanner ? "Scanner" : "RandomShot") << "\n";
 
     first->printShipSegments();
     std::cout << "\n";

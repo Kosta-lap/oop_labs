@@ -18,12 +18,17 @@ int Ship::getShipLength() {
 
 
 bool Ship:: isDestroyed(){
+    int count = 0;
     for (auto segment: segments) {
-        if(segment != SegmentState::Damaged){
-            return false;
+        if(segment == SegmentState::Destroyed){
+            count++;
         }
     }
-    return true;
+    if (count == this->length){
+        return true;
+    }else{
+        return false;
+    }
 }
 
 void Ship::hitSegment(int index) {
