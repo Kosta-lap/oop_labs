@@ -12,7 +12,7 @@
 
 class AbilityManager {
     private:
-        std::queue<std::shared_ptr<AbilityBuilder>> abilities;
+        std::queue<std::shared_ptr<AbilityFactory>> abilities;
         AbilityProduction abilityProduction;
 
     public:
@@ -21,7 +21,7 @@ class AbilityManager {
         void produceAbility(AbilityName abilityName);
 
         std::vector<AbilityName> getRandomAbilities();
-        std::shared_ptr<AbilityBuilder> extractAbility();
+        std::shared_ptr<AbilityFactory> extractAbility();
 
 
         AbilityName font_skill();

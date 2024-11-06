@@ -17,10 +17,9 @@ void RandomShot::applyAbility(GameField &field) {
     std::uniform_int_distribution<> random_index(0, ship_cells.size() - 1);
     Point coords_for_shot = ship_cells[random_index(gen)];
 
-    FieldCell* chosen_segment = field.getCellInfo(coords_for_shot);
+    //FieldCell* chosen_segment = field.getCellInfo(coords_for_shot);
     field.attackField(coords_for_shot);
 
-    chosen_segment->cell_state = CellState::Unknown;
 }
 
 AbilityName RandomShot::getName() {

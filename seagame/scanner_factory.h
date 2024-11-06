@@ -1,10 +1,10 @@
-#ifndef OOP_DOUBLE_DAMAGE_BUILDER_H
-#define OOP_DOUBLE_DAMAGE_BUILDER_H
+#ifndef OOP_SCANNER_FACTORY_H
+#define OOP_SCANNER_FACTORY_H
 
-#include "ability_builder.h"
-#include "double_damage.h"
+#include "ability_factory.h"
+#include "scanner.h"
 
-class DoubleDamageBuilder: public AbilityBuilder{
+class ScannerFactory: public AbilityFactory {
     public:
         std::shared_ptr<AbilityInterface> create(Point cords, std::function<void (bool)> trigger) override;
         AbilityName abilityName() override;

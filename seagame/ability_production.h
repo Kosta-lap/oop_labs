@@ -1,20 +1,20 @@
 #ifndef OOP_ABILITY_PRODUCTION_H
 #define OOP_ABILITY_PRODUCTION_H
 
-#include "ability_builder.h"
-#include "double_damage_builder.h"
-#include "scanner_builder.h"
-#include "random_shot_builder.h"
+#include "ability_factory.h"
+#include "double_damage_factory.h"
+#include "scanner_factory.h"
+#include "random_shot_factory.h"
 
 class AbilityProduction {
     public:
         AbilityProduction();
 
-        std::shared_ptr<AbilityBuilder> getBuilder(AbilityName name);
+        std::shared_ptr<AbilityFactory> getFactory(AbilityName name);
     private:
-        std::shared_ptr<DoubleDamageBuilder> double_damage_builder;
-        std::shared_ptr<ScannerBuilder> scanner_builder;
-        std::shared_ptr<RandomShotBuilder> random_shot_builder;
+        std::shared_ptr<DoubleDamageFactory> double_damage_factory;
+        std::shared_ptr<ScannerFactory> scanner_factory;
+        std::shared_ptr<RandomShotFactory> random_shot_factory;
 };
 
 

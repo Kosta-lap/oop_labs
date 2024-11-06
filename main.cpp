@@ -39,17 +39,8 @@ int main() {
     std::shared_ptr<AddNewAbility> reaction = std::make_shared<AddNewAbility>(a_manager);
     game_field.setCommand(reaction);
 
-    //ShipObserver obs = ShipObserver(&a_manager);
-    //game_field.setShipObserver(&obs);
-
-
-//    first->addObserver(&obs);
-//    second->addObserver(&obs);
-//    third->addObserver(&obs);
-
-
     for (int i = 0; i < 4; ++i) {
-        std::shared_ptr<AbilityBuilder> ab;
+        std::shared_ptr<AbilityFactory> ab;
         try{
             ab = a_manager.extractAbility();
             std::cout << "Ability " << i << ": " << (ab->abilityName() == AbilityName::DoubleDamage ? "DoubleDamage" : ab->abilityName() == AbilityName::Scanner ? "Scanner" : "RandomShot") << "\n";
@@ -76,13 +67,15 @@ int main() {
     a_manager.produceAbility(AbilityName::RandomShot);
     game_field.setAbility(a_manager.extractAbility()->create());
 
-    std::cout << a_manager.queue_size() << "\n";
     game_field.attackField({1, 0});
     game_field.attackField({1, 0});
-    std::cout << a_manager.queue_size() << "\n";
 
-    AbilityName ab = a_manager.font_skill();
-    std::cout << "Ability "<< ": " << (ab == AbilityName::DoubleDamage ? "DoubleDamage" : ab == AbilityName::Scanner ? "Scanner" : "RandomShot") << "\n";
+    try{
+        AbilityName ab = a_manager.font_skill();
+        std::cout << "Ability "<< ": " << (ab == AbilityName::DoubleDamage ? "DoubleDamage" : ab == AbilityName::Scanner ? "Scanner" : "RandomShot") << "\n";
+    }catch (AbilityExtractError(& err)){
+        std::cerr<<"Error: " << err.what() << "\n";
+    }
 
     first->printShipSegments();
     std::cout << "\n";

@@ -20,13 +20,13 @@ add_executable(OOP main.cpp seagame/ship.h seagame/src/ship.cpp
         seagame/src/ability_manager.cpp
         seagame/ability_manager.h
         seagame/ability_name.h
-        seagame/ability_builder.h
-        seagame/src/double_damage_builder.cpp
-        seagame/double_damage_builder.h
-        seagame/src/scanner_builder.cpp
-        seagame/scanner_builder.h
-        seagame/src/random_shot_builder.cpp
-        seagame/random_shot_builder.h
+        seagame/ability_factory.h
+        seagame/src/double_damage_factory.cpp
+        seagame/double_damage_factory.h
+        seagame/src/scanner_factory.cpp
+        seagame/scanner_factory.h
+        seagame/src/random_shot_factory.cpp
+        seagame/random_shot_factory.h
         seagame/src/ability_production.cpp
         seagame/ability_production.h
         seagame/place_error.h

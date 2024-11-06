@@ -6,17 +6,18 @@ AbilityManager::AbilityManager() {
 
     for (auto name:random_abilities){
         this->produceAbility(name);
+
     }
 }
 
 void AbilityManager::produceAbility(AbilityName abilityName) {
-    this->abilities.push(this->abilityProduction.getBuilder(abilityName));
+    this->abilities.push(this->abilityProduction.getFactory(abilityName));
 }
 
-std::shared_ptr<AbilityBuilder> AbilityManager::extractAbility() {
+std::shared_ptr<AbilityFactory> AbilityManager::extractAbility() {
     if (this->abilities.empty()) throw AbilityExtractError("No abilities available!");
 
-    std::shared_ptr<AbilityBuilder> first_ability = this->abilities.front();
+    std::shared_ptr<AbilityFactory> first_ability = this->abilities.front();
     this->abilities.pop();
 
     return first_ability;
@@ -33,6 +34,7 @@ std::vector<AbilityName> AbilityManager::getRandomAbilities() {
 }
 
 AbilityName AbilityManager::font_skill() {
+    if (this->abilities.empty()) throw AbilityExtractError("No abilities available!");
     return this->abilities.front()->abilityName();
 }
 
