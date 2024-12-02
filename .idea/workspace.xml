@@ -21,11 +21,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16d517f6-f27f-4021-bbcd-10f0b5499261" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/seagame/src/abilities/core/ability_manager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seagame/src/abilities/core/ability_production.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seagame/src/abilities/effects/double_damage.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-e04cddd133d8d2c8e81c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-10-24T07-44-03-0236.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-OOP-Debug-2b8043a7ee0e9820136a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-866dcad2800138b2c8a4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-10-25T10-53-56-0591.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-OOP-Debug-c2ecdb0c0c01ace03758.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/main.cpp.obj" afterDir="false" />
@@ -33,27 +36,51 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/ability_production.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/ability_production.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/add_new_ability.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/add_new_ability.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/double_damage.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/double_damage.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/double_damage_factory.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/double_damage_factory.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/game_field.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/game_field.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/random_shot.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/random_shot.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/random_shot_builder.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/random_shot_builder.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/random_shot_factory.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/random_shot_factory.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/scanner.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/scanner.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/scanner_builder.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/scanner_builder.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/scanner_factory.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/scanner_factory.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/ship.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/ship.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/ship_manager.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/ship_manager.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OOP.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OOP.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/ability_builder.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/ability_factory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/ability_manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/ability_manager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/ability_production.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/ability_production.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/double_damage_builder.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/double_damage_factory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/random_shot_builder.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/random_shot_factory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/scanner_builder.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/scanner_factory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/src/ability_manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/ability_manager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/src/ability_production.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/ability_production.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/src/double_damage_builder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/double_damage_factory.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/src/random_shot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/random_shot.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/src/random_shot_builder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/random_shot_factory.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/src/scanner_builder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/scanner_factory.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/ability_extract_error.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/errors/ability_extract_error.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/ability_factory.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/interfaces/ability_factory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/ability_interface.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/interfaces/ability_interface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/ability_manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/core/ability_manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/ability_name.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/ability_production.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/core/ability_production.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/add_new_ability.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/core/add_new_ability.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/command.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/common/command.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/double_damage.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/effects/double_damage.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/double_damage_factory.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/factories/double_damage_factory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/field_cell.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/utils/field_cell.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/game_field.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/core/game_field.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/out_of_bounds_error.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/errors/out_of_bounds_error.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/place_error.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/errors/place_error.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/point.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/utils/point.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/random_shot.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/effects/random_shot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/random_shot_factory.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/factories/random_shot_factory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/scanner.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/effects/scanner.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/scanner_factory.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/factories/scanner_factory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/ship.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/core/ship.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/ship_manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/core/ship_manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/src/ability_manager.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/src/ability_production.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/src/add_new_ability.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/core/add_new_ability.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/src/double_damage.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/src/double_damage_factory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/factories/double_damage_factory.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/src/game_field.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/core/game_field.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/src/random_shot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/effects/random_shot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/src/random_shot_factory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/factories/random_shot_factory.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/src/scanner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/effects/scanner.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/src/scanner_factory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/factories/scanner_factory.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/src/ship.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/core/ship.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seagame/src/ship_manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/core/ship_manager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uml.png" beforeDir="false" afterPath="$PROJECT_DIR$/uml.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,19 +122,26 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kosta\Desktop\OOP\seagame" />
-      <recent name="C:\Users\kosta\Desktop\OOP\seagame\src" />
-      <recent name="C:\Users\kosta\Desktop\OOP" />
+      <recent name="C:\Users\kosta\Desktop\OOP\seagame\src\common" />
+      <recent name="C:\Users\kosta\Desktop\OOP\seagame\src\game\utils" />
+      <recent name="C:\Users\kosta\Desktop\OOP\seagame\src\game\errors" />
+      <recent name="C:\Users\kosta\Desktop\OOP\seagame\src\abilities\interfaces" />
+      <recent name="C:\Users\kosta\Desktop\OOP\seagame\src\game\core" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="OOP" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OOP" TARGET_NAME="OOP" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OOP" RUN_TARGET_NAME="OOP">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OOP" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="true" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OOP" TARGET_NAME="OOP" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OOP" RUN_TARGET_NAME="OOP">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -172,6 +206,30 @@
       <workItem from="1730232811560" duration="794000" />
       <workItem from="1730374977044" duration="232000" />
       <workItem from="1730571501076" duration="362000" />
+      <workItem from="1730918762704" duration="1410000" />
+      <workItem from="1730920206728" duration="2704000" />
+      <workItem from="1731587884890" duration="2125000" />
+      <workItem from="1731604659719" duration="916000" />
+      <workItem from="1731667329608" duration="89000" />
+      <workItem from="1731673550672" duration="1924000" />
+      <workItem from="1731845569787" duration="9000" />
+      <workItem from="1732117541191" duration="5494000" />
+      <workItem from="1732453719572" duration="14160000" />
+      <workItem from="1732477936505" duration="4698000" />
+      <workItem from="1732538333627" duration="15092000" />
+      <workItem from="1732560122866" duration="3036000" />
+      <workItem from="1732610228660" duration="4403000" />
+      <workItem from="1732617808967" duration="6813000" />
+      <workItem from="1732643779565" duration="6571000" />
+      <workItem from="1732705995633" duration="907000" />
+      <workItem from="1732717913433" duration="7784000" />
+      <workItem from="1732870120719" duration="1013000" />
+      <workItem from="1732875780630" duration="145000" />
+      <workItem from="1732882796676" duration="1099000" />
+      <workItem from="1732889136907" duration="661000" />
+      <workItem from="1733047685759" duration="463000" />
+      <workItem from="1733051545785" duration="746000" />
+      <workItem from="1733131562799" duration="2149000" />
     </task>
     <servers />
   </component>
@@ -189,6 +247,10 @@
       <configuration name="CMakeRunConfiguration">
         <watch expression="ship_manager" />
         <watch expression="first" />
+        <watch expression="this-&gt;ships" />
+        <watch expression="this-&gt;ships" />
+        <watch expression="this-&gt;ships[0]-&gt;segments" />
+        <watch expression="player_gf" />
       </configuration>
     </watches-manager>
   </component>

@@ -55,77 +55,101 @@ build CMakeFiles/OOP.dir/main.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Use
   OBJECT_DIR = CMakeFiles\OOP.dir
   OBJECT_FILE_DIR = CMakeFiles\OOP.dir
 
-build CMakeFiles/OOP.dir/seagame/src/ship.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/ship.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\ship.cpp.obj.d
+build CMakeFiles/OOP.dir/seagame/src/game/core/ship.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/game/core/ship.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\game\core\ship.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\game\core
 
-build CMakeFiles/OOP.dir/seagame/src/game_field.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/game_field.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\game_field.cpp.obj.d
+build CMakeFiles/OOP.dir/seagame/src/game/core/game_field.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/game/core/game_field.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\game\core\game_field.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\game\core
 
-build CMakeFiles/OOP.dir/seagame/src/ship_manager.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/ship_manager.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\ship_manager.cpp.obj.d
+build CMakeFiles/OOP.dir/seagame/src/game/core/ship_manager.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/game/core/ship_manager.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\game\core\ship_manager.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\game\core
 
-build CMakeFiles/OOP.dir/seagame/src/double_damage.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/double_damage.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\double_damage.cpp.obj.d
+build CMakeFiles/OOP.dir/seagame/src/abilities/effects/double_damage.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/abilities/effects/double_damage.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\abilities\effects\double_damage.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\abilities\effects
 
-build CMakeFiles/OOP.dir/seagame/src/scanner.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/scanner.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\scanner.cpp.obj.d
+build CMakeFiles/OOP.dir/seagame/src/abilities/effects/scanner.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/abilities/effects/scanner.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\abilities\effects\scanner.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\abilities\effects
 
-build CMakeFiles/OOP.dir/seagame/src/random_shot.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/random_shot.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\random_shot.cpp.obj.d
+build CMakeFiles/OOP.dir/seagame/src/abilities/effects/random_shot.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/abilities/effects/random_shot.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\abilities\effects\random_shot.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\abilities\effects
 
-build CMakeFiles/OOP.dir/seagame/src/ability_manager.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/ability_manager.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\ability_manager.cpp.obj.d
+build CMakeFiles/OOP.dir/seagame/src/abilities/core/ability_manager.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/abilities/core/ability_manager.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\abilities\core\ability_manager.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\abilities\core
 
-build CMakeFiles/OOP.dir/seagame/src/double_damage_factory.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/double_damage_factory.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\double_damage_factory.cpp.obj.d
+build CMakeFiles/OOP.dir/seagame/src/abilities/factories/double_damage_factory.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/abilities/factories/double_damage_factory.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\abilities\factories\double_damage_factory.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\abilities\factories
 
-build CMakeFiles/OOP.dir/seagame/src/scanner_factory.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/scanner_factory.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\scanner_factory.cpp.obj.d
+build CMakeFiles/OOP.dir/seagame/src/abilities/factories/scanner_factory.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/abilities/factories/scanner_factory.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\abilities\factories\scanner_factory.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\abilities\factories
 
-build CMakeFiles/OOP.dir/seagame/src/random_shot_factory.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/random_shot_factory.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\random_shot_factory.cpp.obj.d
+build CMakeFiles/OOP.dir/seagame/src/abilities/factories/random_shot_factory.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/abilities/factories/random_shot_factory.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\abilities\factories\random_shot_factory.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\abilities\factories
 
-build CMakeFiles/OOP.dir/seagame/src/ability_production.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/ability_production.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\ability_production.cpp.obj.d
+build CMakeFiles/OOP.dir/seagame/src/abilities/core/ability_production.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/abilities/core/ability_production.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\abilities\core\ability_production.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\abilities\core
 
-build CMakeFiles/OOP.dir/seagame/src/add_new_ability.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/add_new_ability.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\add_new_ability.cpp.obj.d
+build CMakeFiles/OOP.dir/seagame/src/abilities/core/add_new_ability.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/abilities/core/add_new_ability.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\abilities\core\add_new_ability.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\abilities\core
+
+build CMakeFiles/OOP.dir/seagame/src/game/core/game_state.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/game/core/game_state.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\game\core\game_state.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\OOP.dir
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\game\core
+
+build CMakeFiles/OOP.dir/seagame/src/game/core/game.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/game/core/game.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\game\core\game.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\OOP.dir
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\game\core
+
+build CMakeFiles/OOP.dir/seagame/src/common/FileWrapper.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/common/FileWrapper.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\common\FileWrapper.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\OOP.dir
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\common
+
+build CMakeFiles/OOP.dir/seagame/src/game/core/game_save_loader.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/kosta/Desktop/OOP/seagame/src/game/core/game_save_loader.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\seagame\src\game\core\game_save_loader.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\OOP.dir
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\seagame\src\game\core
 
 
 # =============================================================================
@@ -135,7 +159,7 @@ build CMakeFiles/OOP.dir/seagame/src/add_new_ability.cpp.obj: CXX_COMPILER__OOP_
 #############################################
 # Link the executable OOP.exe
 
-build OOP.exe: CXX_EXECUTABLE_LINKER__OOP_Debug CMakeFiles/OOP.dir/main.cpp.obj CMakeFiles/OOP.dir/seagame/src/ship.cpp.obj CMakeFiles/OOP.dir/seagame/src/game_field.cpp.obj CMakeFiles/OOP.dir/seagame/src/ship_manager.cpp.obj CMakeFiles/OOP.dir/seagame/src/double_damage.cpp.obj CMakeFiles/OOP.dir/seagame/src/scanner.cpp.obj CMakeFiles/OOP.dir/seagame/src/random_shot.cpp.obj CMakeFiles/OOP.dir/seagame/src/ability_manager.cpp.obj CMakeFiles/OOP.dir/seagame/src/double_damage_factory.cpp.obj CMakeFiles/OOP.dir/seagame/src/scanner_factory.cpp.obj CMakeFiles/OOP.dir/seagame/src/random_shot_factory.cpp.obj CMakeFiles/OOP.dir/seagame/src/ability_production.cpp.obj CMakeFiles/OOP.dir/seagame/src/add_new_ability.cpp.obj
+build OOP.exe: CXX_EXECUTABLE_LINKER__OOP_Debug CMakeFiles/OOP.dir/main.cpp.obj CMakeFiles/OOP.dir/seagame/src/game/core/ship.cpp.obj CMakeFiles/OOP.dir/seagame/src/game/core/game_field.cpp.obj CMakeFiles/OOP.dir/seagame/src/game/core/ship_manager.cpp.obj CMakeFiles/OOP.dir/seagame/src/abilities/effects/double_damage.cpp.obj CMakeFiles/OOP.dir/seagame/src/abilities/effects/scanner.cpp.obj CMakeFiles/OOP.dir/seagame/src/abilities/effects/random_shot.cpp.obj CMakeFiles/OOP.dir/seagame/src/abilities/core/ability_manager.cpp.obj CMakeFiles/OOP.dir/seagame/src/abilities/factories/double_damage_factory.cpp.obj CMakeFiles/OOP.dir/seagame/src/abilities/factories/scanner_factory.cpp.obj CMakeFiles/OOP.dir/seagame/src/abilities/factories/random_shot_factory.cpp.obj CMakeFiles/OOP.dir/seagame/src/abilities/core/ability_production.cpp.obj CMakeFiles/OOP.dir/seagame/src/abilities/core/add_new_ability.cpp.obj CMakeFiles/OOP.dir/seagame/src/game/core/game_state.cpp.obj CMakeFiles/OOP.dir/seagame/src/game/core/game.cpp.obj CMakeFiles/OOP.dir/seagame/src/common/FileWrapper.cpp.obj CMakeFiles/OOP.dir/seagame/src/game/core/game_save_loader.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\OOP.dir
