@@ -38,9 +38,6 @@ class GameState {
         ShipManager& getPlayerShipManager();
         ShipManager& getEnemyShipManager();
 
-//        void serialize(FileWrapper& file);
-//        void deserialize(FileWrapper& file);
-
         friend FileWrapper& operator<<(FileWrapper& file, const GameState& game_state);
         friend FileWrapper& operator>>(FileWrapper& file, GameState& game_state);
 };

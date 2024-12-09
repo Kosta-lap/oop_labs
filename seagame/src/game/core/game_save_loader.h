@@ -8,11 +8,11 @@ class GameSaveLoader {
     private:
         std::string filename;
     public:
-        GameSaveLoader(const std::string& filename);
+        GameSaveLoader(std::string_view filename);
 
         void save(const GameState& game_state, int round);
         void load(GameState& game_state, int& round);
+        int getSum();
 };
-
 
 #endif

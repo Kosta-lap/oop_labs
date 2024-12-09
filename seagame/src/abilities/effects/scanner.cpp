@@ -3,6 +3,10 @@
 Scanner::Scanner(Point coordinates, std::function<void (bool)> trigger) : coords(coordinates), trigger_func(trigger) {}
 
 void Scanner::applyAbility(GameField &field) {
+    if(!field.checkCorrectCoords(coords)){
+        throw std::invalid_argument("Scanner out of bounds!");
+    }
+
     bool is_there_ship = false;
     std::vector<Point> sector {coords, {coords.x + 1, coords.y}, {coords.x, coords.y}, {coords.x + 1, coords.y + 1}};
 

@@ -38,7 +38,6 @@ add_executable(OOP main.cpp seagame/src/game/core/ship.h seagame/src/game/core/s
         seagame/src/game/core/game_state.h
         seagame/src/game/core/game.cpp
         seagame/src/game/core/game.h
-        seagame/src/common/FileWrapper.cpp
         seagame/src/common/FileWrapper.h
         seagame/src/game/core/game_save_loader.cpp
         seagame/src/game/core/game_save_loader.h

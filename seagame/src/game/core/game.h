@@ -18,13 +18,11 @@ class Game {
         void play();
         void newRound();
 
-        //void load();
-        //void save();
-
         void playerTurn(int choice);
         void enemyTurn();
 
         void inputPlayerData();
+        int getValidInput();
 };
 
 

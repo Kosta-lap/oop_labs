@@ -9,18 +9,27 @@ Game::Game() {
 }
 
 void Game::start() {
-    int choice = 0;
+    int choice;
 
     std::cout << "Welcome to the sea battle!" << "\n";
     std::cout << "Choose the option: 0 - Start new game; 1 - Load game" << '\n';
 
-    std::cin >> choice;
+    choice = getValidInput();
+
     system("cls");
 
     if (choice){
-        GameSaveLoader saverLoader("../game.txt");
-        saverLoader.load(game_state, this->round);
-    }else{
+        GameSaveLoader saverLoader = GameSaveLoader("../game.txt");
+        try{
+            saverLoader.load(game_state, this->round);
+        }catch (const std::invalid_argument& e){
+            std::cout << e.what() << "\n";
+            std::cout << "Starting a new game instead.\n";
+            choice = 0;
+        }
+    }
+
+    if (choice == 0){
         this->inputPlayerData();
         this->game_state.placeEnemyShips();
     }
@@ -41,32 +50,74 @@ void Game::inputPlayerData() {
         bool placed = false;
 
         while(!placed){
-            std::cout << "Enter the coordinates for the ship of length " << ship->getShipLength() << ": ";
-            std::cin >> point.x >> point.y >> orientation;
+            try{
+                std::cout << "Enter the coordinates for the ship of length " << ship->getShipLength() << ": ";
+                std::cin >> point.x >> point.y >> orientation;
 
-            placed = game_state.placePlayerShip(point, orientation, i);
+                if (std::cin.fail()) {
+                    throw std::invalid_argument("Invalid input. Please enter numbers.");
+                }
+                placed = game_state.placePlayerShip(point, orientation, i);
+
+            }catch (const std::invalid_argument& e) {
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << e.what() << "\n";
+            }
         }
     }
     system("cls");
 }
 
 void Game::play() {
+    bool game_running = true;
     std::cout << "Everything was successful!\n";
 
-    while (true){
+    while (game_running){
         if(is_player_turn){
-            int choice = 0;
+            int choice;
             std::cout << "Current round: " << this->round << "\n";
             game_state.printBattleField();
             std::cout << "\n";
             std::cout << "Available abilities: " << game_state.getAbilitiesCount() << "\n";
             std::cout << "The first available ability: " << game_state.getLastAbilityName() << "\n";
-            std::cout << "Choose the action: 0 - Attack the enemy; 1 - Use ability; 2 - Save game and exit" << '\n';
-            std::cin >> choice;
+            std::cout << "Choose the action: 0 - Attack the enemy; 1 - Use ability; 2 - Save game; 3 - Load game; 4 - Exit" << '\n';
+
+            choice = getValidInput();
+
             if(choice == 2){
                 GameSaveLoader saverLoader("../game.txt");
                 saverLoader.save(game_state, this->round);
-                return;
+
+                system("cls");
+                std::cout << "Game has been saved!" << "\n";
+                continue;
+            }else if(choice == 3){
+                GameSaveLoader saverLoader = GameSaveLoader("../game.txt");
+                try{
+                    saverLoader.load(game_state, this->round);
+                }catch (const std::invalid_argument& e){
+                    system("cls");
+                    std::cout << e.what() << "\n";
+                    std::cout << "Can't load the save :(\n";
+                    continue;
+                }
+
+                system("cls");
+                std::cout << "Game has been loaded!" << "\n";
+                continue;
+            }else if(choice == 4){
+                system("cls");
+                std::cout << "Thank you for playing!" << "\n";
+                Sleep(2000);
+                game_running = false;
+
+                continue;
+            }else if(choice > 4 || choice < 0){
+                std::cout << "There is no such command :(" << "\n";
+                Sleep(500);
+                system("cls");
+                continue;
             }
 
             playerTurn(choice);
@@ -88,7 +139,8 @@ void Game::play() {
                 std::cout << "You lasted for " << this->round - 1 << " round!\n";
                 std::cout << "They'll take you next time) \n";
                 Sleep(2000);
-                return;
+                game_running = false;
+                continue;
             }
             is_player_turn = true;
         }
@@ -97,21 +149,33 @@ void Game::play() {
 }
 
 void Game::playerTurn(int choice){
+    bool valid_attack = false;
     Point point = {0, 0};
     if(choice == 1){
         game_state.useAbility(is_double_damage);
     }
 
-    std::cout << "Choose the coords to attack: ";
-    std::cin >> point.x >> point.y;
-    game_state.getEnemyField().attackField(point, this->is_double_damage);
+    while(!valid_attack){
+        std::cout << "Choose the coords to attack: ";
+        point.x = getValidInput();
+        point.y = getValidInput();
+        try{
+            game_state.getEnemyField().attackField(point, this->is_double_damage);
+            valid_attack = true;
+        } catch (const std::invalid_argument& e) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << e.what() << "\n";
+        }
+    }
 }
 
 void Game::enemyTurn(){
     bool fake_dd = false;
+    bool valid_attack = false;
     GameField& player_gf =  game_state.getPlayerField();
 
-    while (true){
+    while (!valid_attack){
         Point point = {0, 0};
 
         std::random_device rd;
@@ -121,9 +185,16 @@ void Game::enemyTurn(){
         point.x = dis_width(gen);
         point.y = dis_height(gen);
 
-        if(player_gf.getSellState(point) != CellState::Empty){
+        CellState cell_state = player_gf.getSellState(point);
+        if(cell_state != CellState::Empty){
+            if(cell_state == CellState::Ship){
+                FieldCell* cell = player_gf.getCellInfo(point);
+                if(cell->ship_pointer->getSegment(cell->segment_index) == SegmentState::Destroyed){
+                    continue;
+                }
+            }
             player_gf.attackField(point, fake_dd);
-            break;
+            valid_attack = true;
         }
     }
 }
@@ -135,18 +206,21 @@ void Game::newRound() {
     game_state.resetEnemy();
 }
 
-//void Game::load() {
-//    std::string filename = "../game.txt";
-//    FileWrapper file = FileWrapper(filename, std::ios::in);
-//
-//    game_state.deserialize(file);
-//    file.read(this->round);
-//}
-//
-//void Game::save() {
-//    std::string filename = "../game.txt";
-//    FileWrapper file = FileWrapper(filename, std::ios::out);
-//
-//    game_state.serialize(file);
-//    file.write(this->round);
-//}
+int Game::getValidInput() {
+    int num;
+    bool valid_input = false;
+    while (!valid_input) {
+        try {
+            std::cin >> num;
+            if (std::cin.fail()) {
+                throw std::invalid_argument("Invalid input. Please enter a number.");
+            }
+            valid_input = true;
+        } catch (const std::invalid_argument& e) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << e.what() << "\n";
+        }
+    }
+    return num;
+}

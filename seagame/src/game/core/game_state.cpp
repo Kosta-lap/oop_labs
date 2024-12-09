@@ -73,11 +73,23 @@ void GameState::useAbility(bool& is_double_damage) {
             if(ab->getName() == "Scanner"){
                 bool flag = false;
                 Point point = {0, 0};
-
-                std::cout << "Choose the coords to scanner: ";
-                std::cin >> point.x >> point.y;
-
-                enemy_gf->setAbility(ab->create(point, [&flag](bool is_there_ship){flag = is_there_ship;}));
+                bool valid_input = false;
+                while (!valid_input) {
+                    std::cout << "Choose the coords to scanner: ";
+                    try {
+                        std::cin >> point.x >> point.y;
+                        if (std::cin.fail()) {
+                            throw std::invalid_argument("Invalid input. Please enter a number.");
+                        } else {
+                            enemy_gf->setAbility(ab->create(point, [&flag](bool is_there_ship){flag = is_there_ship;}));
+                            valid_input = true;
+                        }
+                    } catch (const std::invalid_argument& e) {
+                        std::cin.clear();
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                        std::cout << e.what() << "\n";
+                    }
+                }
 
                 if(flag){
                     std::cout << "Ship is detected" << "\n";
@@ -188,14 +200,6 @@ ShipManager &GameState::getEnemyShipManager() {
 std::string GameState::getLastAbilityName() {
     return player_am->getLastName();
 }
-
-//void GameState::serialize(FileWrapper &file) {
-//    file << *this;
-//}
-//
-//void GameState::deserialize(FileWrapper &file) {
-//    file >> *this;
-//}
 
 FileWrapper& operator<<(FileWrapper& file, const GameState& game_state) {
     game_state.player_sm->serialize(file);
