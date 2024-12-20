@@ -41,3 +41,31 @@ int GameSaveLoader::getSum(){
 
     return totalSum;
 }
+
+
+void GameSaveLoader::save(Game& game) {
+    FileWrapper* file = new FileWrapper(filename, std::ios::out);
+    *file << game.getGameState();
+    file->write(game.getCurrentRound());
+    delete file;
+
+    FileWrapper fileOfSum("../summary", std::ios::out);
+    fileOfSum.write(getSum());
+}
+
+void GameSaveLoader::load(Game& game) {
+    int oldSum, fileSum;
+
+    FileWrapper fileOfSum("../summary", std::ios::in);
+    fileOfSum.read(oldSum);
+    fileSum = getSum();
+
+    if (oldSum != fileSum){
+        throw std::invalid_argument("Data has been crashed!");
+    }
+
+    FileWrapper file(filename, std::ios::in);
+
+    file >> game.getGameState();
+    file.read(game.getCurrentRound());
+}

@@ -23,39 +23,29 @@
     <list default="true" id="16d517f6-f27f-4021-bbcd-10f0b5499261" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lapshov_Konstantin_lb3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Lapshov_Konstantin_lb3.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-26e6b7d0cf880cd0ee2d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-12-02T10-05-04-0540.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-OOP-Debug-ecb82fe595b0e8efdd8f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lapshov_Konstantin_lb3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-ddb75de25673376e420f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-12-02T16-53-02-0259.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-OOP-Debug-4e7696694bec5dd835db.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/core/ability_manager.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/core/ability_manager.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/core/add_new_ability.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/core/add_new_ability.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/effects/double_damage.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/effects/double_damage.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/effects/random_shot.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/effects/random_shot.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/effects/scanner.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/effects/scanner.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/factories/double_damage_factory.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/factories/double_damage_factory.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/factories/random_shot_factory.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/factories/random_shot_factory.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/factories/scanner_factory.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/abilities/factories/scanner_factory.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/game/core/game.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/game/core/game.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/game/core/game_field.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/game/core/game_field.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/game/core/game_save_loader.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/game/core/game_save_loader.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/game/core/game_state.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/game/core/game_state.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/game/core/ship_manager.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP.dir/seagame/src/game/core/ship_manager.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OOP.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OOP.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.txt" beforeDir="false" afterPath="$PROJECT_DIR$/game.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/src/abilities/effects/scanner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/abilities/effects/scanner.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/src/common/FileWrapper.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seagame/src/common/FileWrapper.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/common/FileWrapper.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seagame/src/game/core/game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/core/game.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seagame/src/game/core/game.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/core/game.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seagame/src/game/core/game_save_loader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/core/game_save_loader.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seagame/src/game/core/game_save_loader.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/core/game_save_loader.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seagame/src/game/core/game_state.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/core/game_state.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seagame/src/game/core/game_state.h" beforeDir="false" afterPath="$PROJECT_DIR$/seagame/src/game/core/game_state.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/summary" beforeDir="false" afterPath="$PROJECT_DIR$/summary" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uml.png" beforeDir="false" afterPath="$PROJECT_DIR$/uml.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,17 +87,17 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.notifications&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kosta\Desktop\OOP\seagame\src\game\IOlogic" />
       <recent name="C:\Users\kosta\Desktop\OOP\seagame\src\common" />
       <recent name="C:\Users\kosta\Desktop\OOP\seagame\src\game\utils" />
       <recent name="C:\Users\kosta\Desktop\OOP\seagame\src\game\errors" />
       <recent name="C:\Users\kosta\Desktop\OOP\seagame\src\abilities\interfaces" />
-      <recent name="C:\Users\kosta\Desktop\OOP\seagame\src\game\core" />
     </key>
   </component>
   <component name="RunManager">
@@ -212,7 +202,19 @@
       <workItem from="1733424293259" duration="1189000" />
       <workItem from="1733489365684" duration="569000" />
       <workItem from="1733601218626" duration="1953000" />
-      <workItem from="1733738417111" duration="1973000" />
+      <workItem from="1733738417111" duration="2651000" />
+      <workItem from="1733823790969" duration="1000" />
+      <workItem from="1733835600383" duration="8000" />
+      <workItem from="1733927297950" duration="2281000" />
+      <workItem from="1734042515391" duration="607000" />
+      <workItem from="1734260692586" duration="1321000" />
+      <workItem from="1734262136758" duration="13918000" />
+      <workItem from="1734371183330" duration="1000" />
+      <workItem from="1734535112444" duration="12539000" />
+      <workItem from="1734601087934" duration="1583000" />
+      <workItem from="1734614634566" duration="4777000" />
+      <workItem from="1734632441361" duration="3028000" />
+      <workItem from="1734675336626" duration="2608000" />
     </task>
     <servers />
   </component>

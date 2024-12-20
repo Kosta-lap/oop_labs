@@ -8,22 +8,23 @@
 class Game {
     private:
         GameState game_state;
-        int round;
 
+        int round;
         bool is_double_damage;
-        bool is_player_turn;
     public:
         Game();
-        void start();
-        void play();
-        void newRound();
 
-        void playerTurn(int choice);
+        void newRound();
         void enemyTurn();
 
-        void inputPlayerData();
-        int getValidInput();
+        bool isPlayerLose();
+        bool isPlayerWon();
+        void playerShoot(Point cords);
+        void usePlayerAbility(AbilityUsageInfo& info);
+
+        GameState& getGameState();
+        int& getCurrentRound();
 };
 
 
-#endif //OOP_GAME_H
+#endif

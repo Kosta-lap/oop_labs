@@ -41,5 +41,16 @@ add_executable(OOP main.cpp seagame/src/game/core/ship.h seagame/src/game/core/s
         seagame/src/common/FileWrapper.h
         seagame/src/game/core/game_save_loader.cpp
         seagame/src/game/core/game_save_loader.h
+        seagame/src/game/IOlogic/printer.cpp
+        seagame/src/game/IOlogic/printer.h
+        seagame/src/game/IOlogic/printer.cpp
+        seagame/src/game/IOlogic/commands.h
+        seagame/src/game/IOlogic/cli_input.cpp
+        seagame/src/game/IOlogic/cli_input.h
+        seagame/src/game/core/game_controller.cpp
+        seagame/src/game/core/game_controller.h
+        seagame/src/game/IOlogic/cli_output.cpp
+        seagame/src/game/IOlogic/cli_output.h
+        seagame/src/abilities/core/ability_info.h
 )
     

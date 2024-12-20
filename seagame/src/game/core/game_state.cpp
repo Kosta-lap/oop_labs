@@ -1,6 +1,7 @@
 #include "game_state.h"
 #include "../../abilities/core/add_new_ability.h"
 #include "../../abilities/errors/ability_extract_error.h"
+#include "../IOlogic/printer.h"
 
 GameState::GameState() {
     this->player_gf = new GameField(10, 10);
@@ -34,12 +35,14 @@ bool GameState::placePlayerShip(Point point, int orientation, int index){
 
         return true;
     }catch(PlaceError &err){
-        std::cout << err.what() << "\n";
-        return false;
+        throw PlaceError("You cant place ship on this coords!");
     }
 }
 
 void GameState::placeEnemyShips(){
+    this->enemy_cords.clear();
+    this->enemy_orient.clear();
+
     std::random_device rd;
     std::mt19937 gen(rd());
 
@@ -66,102 +69,30 @@ void GameState::placeEnemyShips(){
         index++;
     }
 }
-
-void GameState::useAbility(bool& is_double_damage) {
+void GameState::useAbility(bool& is_double_damage, AbilityUsageInfo& info) {
     try{
         std::shared_ptr<AbilityFactory> ab = player_am->extractAbility();
-            if(ab->getName() == "Scanner"){
-                bool flag = false;
-                Point point = {0, 0};
-                bool valid_input = false;
-                while (!valid_input) {
-                    std::cout << "Choose the coords to scanner: ";
-                    try {
-                        std::cin >> point.x >> point.y;
-                        if (std::cin.fail()) {
-                            throw std::invalid_argument("Invalid input. Please enter a number.");
-                        } else {
-                            enemy_gf->setAbility(ab->create(point, [&flag](bool is_there_ship){flag = is_there_ship;}));
-                            valid_input = true;
-                        }
-                    } catch (const std::invalid_argument& e) {
-                        std::cin.clear();
-                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                        std::cout << e.what() << "\n";
-                    }
-                }
-
-                if(flag){
-                    std::cout << "Ship is detected" << "\n";
-                }else{
-                    std::cout << "Ship is not detected" << "\n";
-                }
-                std::cout << "\n";
-            }else if(ab->getName() == "DoubleDamage"){
+        if (ab) {
+            info.abilityName = ab->getName();
+            if (info.abilityName == "Scanner") {
+                enemy_gf->setAbility(ab->create(info.coordinates, [&info](bool is_there_ship){info.resultOfScanner = is_there_ship;}));
+            } else if (info.abilityName == "DoubleDamage") {
                 enemy_gf->setAbility(ab->create({},[&is_double_damage](bool is_dd){is_double_damage = is_dd;}));
-            }else if(ab->getName() == "RandomShot"){
+                info.isDoubleDamage = true;
+            } else if (info.abilityName == "RandomShot") {
                 enemy_gf->setAbility(ab->create());
-                std::cout << "Our artillery has successfully covered them!" << "\n";
+                info.randomShotPerformed = true;
             }
+        } else {
+            info.noAbilities = true;
+        }
     }catch(AbilityExtractError(& err)){
-        std::cerr<<"Error: " << err.what() << "\n";
+        info.errorOccurred = true;
     }
 }
 
 int GameState::getAbilitiesCount(){
     return player_am->queueSize();
-}
-
-void GameState::printBattleField() {
-    std::cout << "  Player Field\t\t\t  Enemy Field\n";
-    std::cout << "  ";
-    for (int j = 0; j < player_gf->getFieldWidth(); ++j) {
-        std::cout << j << " ";
-    }
-    std::cout << "\t\t  ";
-    for (int j = 0; j < enemy_gf->getFieldWidth(); ++j) {
-        std::cout << j << " ";
-    }
-    std::cout << "\n";
-
-    for (int i = 0; i < player_gf->getFieldHeight(); ++i) {
-        std::cout << i << " ";
-        for (int j = 0; j < player_gf->getFieldWidth(); ++j) {
-            FieldCell* state = player_gf->getCellInfo({j, i});
-
-            if (state->cell_state == CellState::Unknown) {
-                if(state->ship_pointer != nullptr){
-                    std::cout << "■ ";
-                    continue;
-                }
-                std::cout << "□ ";
-            }else if(state->cell_state == CellState::Ship){
-                if(state->ship_pointer->getSegment(state->segment_index) == SegmentState::Damaged){
-                    std::cout << "◧ ";
-                }else if(state->ship_pointer->getSegment(state->segment_index) == SegmentState::Destroyed){
-                    std::cout << "▧ ";
-                }
-            }else if (state->cell_state == CellState::Empty) {
-                std::cout << "● ";
-            }
-        }
-        std::cout << "\t\t" << i << " ";
-        for (int j = 0; j < enemy_gf->getFieldWidth(); ++j) {
-            FieldCell* state = enemy_gf->getCellInfo({j, i});
-            if (state->cell_state == CellState::Unknown) {
-                std::cout << "□ ";
-            } else if (state->cell_state == CellState::Empty) {
-                std::cout << "● ";
-            } else if (state->cell_state == CellState::Ship) {
-                if(state->ship_pointer->getSegment(state->segment_index) == SegmentState::Damaged){
-                    std::cout << "◧ ";
-                }else if(state->ship_pointer->getSegment(state->segment_index) == SegmentState::Destroyed){
-                    std::cout << "▧ ";
-                }
-            }
-        }
-        std::cout << "\n";
-    }
 }
 
 void GameState::resetEnemy() {

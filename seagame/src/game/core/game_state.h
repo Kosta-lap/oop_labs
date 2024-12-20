@@ -5,6 +5,7 @@
 #include "ship_manager.h"
 #include "ship.h"
 #include "../../abilities/core/ability_manager.h"
+#include "../../abilities/core/ability_info.h"
 #include "../errors/place_error.h"
 
 class GameState {
@@ -26,8 +27,7 @@ class GameState {
 
         bool placePlayerShip(Point point, int orientation, int index);
         void placeEnemyShips();
-        void useAbility(bool& is_double_damage);
-        void printBattleField();
+        void useAbility(bool& is_double_damage, AbilityUsageInfo& info);
         void resetEnemy();
 
         int getAbilitiesCount();
